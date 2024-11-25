@@ -1,0 +1,26 @@
+<div class="container">
+    <header class="header">
+      <div class="logo-container">
+        <img src="assets/svg/areavermelha-logo.svg" alt="Ícone">
+      </div>
+      <div class="nav-buttons">
+        <button class="back-button" routerLink="/choice">Voltar</button>
+      </div>
+    </header>
+    
+    <main class="main-content">
+      <section class="info-card">
+        <h2>Ranking de Áreas</h2>
+        <ul class="areas-list" *ngIf="rankings.length > 0; else noRankings">
+          <li class="area-item" *ngFor="let ranking of rankings">
+            <span class="area-name">Bairro: {{ ranking.neighborhood }}</span>
+            <span class="area-incidents">Quantidade de Citações: {{ ranking.count }}</span>
+          </li>
+        </ul>
+        <ng-template #noRankings>
+          <p class="no-rankings">Nenhuma área registrada.</p>
+        </ng-template>
+      </section>
+    </main>
+  </div>
+  

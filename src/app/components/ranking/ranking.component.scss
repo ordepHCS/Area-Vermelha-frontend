@@ -1,0 +1,117 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  background-color: $background-color1;
+  animation: fade-in 0.5s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .logo {
+        max-height: 100px;
+      }
+    }
+
+    .nav-buttons {
+      .back-button {
+        padding: 10px 20px;
+        background-color: $primary-color;
+        color: $background-color1;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+
+    .info-card {
+      background-color: $background-light;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: $box-shadow;
+      text-align: center;
+      transition: transform 0.3s;      
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        transition: color 0.3s, transform 0.3s;
+
+        &:hover {
+          color: $primary-color;
+          transform: translateY(-5px);
+        }
+      }
+
+      .areas-list {
+        list-style: none;
+        padding: 0;
+        
+        .area-item {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          margin-bottom: 10px;
+          padding: 10px;
+          background: $background-color2;
+          border-radius: 10px;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: lighten($background-color2, 10%);
+          }
+
+          .area-name, .area-incidents {
+            font-weight: bold;
+            color: $primary-color;
+          }
+        }
+      }
+
+      .no-rankings {
+        font-size: 1rem;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

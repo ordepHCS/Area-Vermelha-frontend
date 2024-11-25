@@ -1,0 +1,83 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  background-color: $background-color1;
+  animation: fade-in 0.5s ease-in;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  padding: 20px;
+
+  .header {
+    .logo-container {
+      display: none; 
+    }
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    .layout {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 800px;
+
+      .logo-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .logo {
+          max-height: 250px;
+        }
+      }
+
+      .article-card {
+        flex: 2;
+        background-color: $background-light;
+        padding: 20px; 
+        border-radius: 25px;
+        box-shadow: $box-shadow;
+        text-align: center;
+        transition: transform 0.3s; 
+        margin-left: 20px; 
+        
+        &:hover {
+          transform: scale(1.05); 
+        }
+
+        h2 {
+          margin-bottom: 15px;
+          font-size: 1.5rem;
+          transition: color 0.3s, transform 0.3s;
+
+          &:hover {
+            color: $primary-color;
+            transform: translateY(-5px);
+          }
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

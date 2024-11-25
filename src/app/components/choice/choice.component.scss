@@ -1,0 +1,102 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  background-color: $background-color1;
+  animation: fade-in 0.5s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .header {
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      
+      .logo {
+        max-height: 100px;
+      }
+    }
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+
+    .info-card {
+      background-color: $background-light;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: $box-shadow;
+      text-align: center;
+      transition: transform 0.3s;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        transition: color 0.3s, transform 0.3s;
+
+        &:hover {
+          color: $primary-color;
+          transform: translateY(-5px);
+        }
+      }
+
+      .info-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .info-button {
+          padding: 10px 20px;
+          border: 1px solid $border-color;
+          border-radius: 20px;
+          background-color: $primary-color;
+          color: $background-color1;
+          font-weight: bold;
+          cursor: pointer;
+          box-shadow: $box-shadow;
+          transition: background-color 0.3s, transform 0.3s;
+
+          &:hover {
+            background-color: $secondary-color;
+            color: $background-color1;
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      .success-message {
+        margin-top: 20px;
+        padding: 15px 20px;
+        background-color: $success-color;
+        color: $background-color1;
+        font-weight: bold;
+        border-radius: 8px;
+        box-shadow: $box-shadow;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

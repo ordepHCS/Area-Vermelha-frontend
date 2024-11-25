@@ -3,17 +3,20 @@ import { Component } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-register-layout',
+  selector: 'app-complaint',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './register-layout.component.html',
-  styleUrls: ['./register-layout.component.scss']
+  templateUrl: './complaint.component.html',
+  styleUrls: ['./complaint.component.scss']
 })
-export class RegisterLayoutComponent {
+export class ComplaintComponent {
   constructor(private router: Router) {}
 
-  onRegister(event: Event) {
-    event.preventDefault();
+  onBack() {
+    this.router.navigate(['/choice']);
+  }
+
+  onSubmit() {
     this.router.navigate(['/choice']);
   }
 }

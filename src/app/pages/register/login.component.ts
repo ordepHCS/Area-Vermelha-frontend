@@ -10,6 +10,4 @@ import { RegisterLayoutComponent } from '../../components/register-layout/regist
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
-export class LoginComponent {
-
-}
+export class RegisterComponent {}

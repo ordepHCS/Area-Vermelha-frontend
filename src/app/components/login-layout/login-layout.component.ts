@@ -3,16 +3,16 @@ import { Component } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-register-layout',
+  selector: 'app-login-layout',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './register-layout.component.html',
-  styleUrls: ['./register-layout.component.scss']
+  templateUrl: './login-layout.component.html',
+  styleUrls: ['./login-layout.component.scss']
 })
-export class RegisterLayoutComponent {
+export class LoginLayoutComponent {
   constructor(private router: Router) {}
 
-  onRegister(event: Event) {
+  onLogin(event: Event) {
     event.preventDefault();
     this.router.navigate(['/choice']);
   }
