@@ -93,6 +93,12 @@
       align-items: center;
       gap: 10px;
 
+      .file-upload-text {
+        font-size: 14px;
+        color: $text-color;
+        font-family: 'Arial Black', Arial, sans-serif;
+      }
+
       .add-button {
         background: $secondary-color;
         color: $background-color1;
@@ -106,6 +112,7 @@
         display: flex;
         align-items: center;
         gap: 8px;
+        font-family: 'Arial Black', Arial, sans-serif;
 
         &:hover {
           background: darken($secondary-color, 10%);
@@ -115,10 +122,6 @@
 
       .form-control {
         display: none;
-      }
-
-      .add-button {
-        margin-left: auto;
       }
     }
 

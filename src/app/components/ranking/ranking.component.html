@@ -14,7 +14,7 @@
         <ul class="areas-list" *ngIf="rankings.length > 0; else noRankings">
           <li class="area-item" *ngFor="let ranking of rankings">
             <span class="area-name">Bairro: {{ ranking.neighborhood }}</span>
-            <span class="area-incidents">Quantidade de Citações: {{ ranking.count }}</span>
+            <span class="area-incidents">N°: {{ ranking.count }}</span>
           </li>
         </ul>
         <ng-template #noRankings>

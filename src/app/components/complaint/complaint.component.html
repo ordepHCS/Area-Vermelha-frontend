@@ -1,47 +1,47 @@
 <div class="header-container">
-  <img src="assets/svg/areavermelha-logo.svg" alt="Logo" class="logo">
+  <img src="assets/svg/areavermelha-logo.svg" alt="Área Vermelha Logo" class="logo">
   <a routerLink="/choice" class="back-link">Voltar</a>
 </div>
 
 <div class="container">
-  <h2 class="title">Cadastrar Reclamação</h2>
-  <form class="form" (ngSubmit)="onSubmit()">
-      <div class="form-left">
-          <div class="form-group">
-              <label for="cep">CEP</label>
-              <input id="cep" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-              <label for="rua">Rua</label>
-              <input id="rua" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-              <label for="bairro">Bairro</label>
-              <input id="bairro" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-              <label for="cidade">Cidade</label>
-              <input id="cidade" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-              <label for="uf">UF</label>
-              <input id="uf" type="text" class="form-control">
-          </div>
+  <h2 class="title">Criar Reclamação</h2>
+  <form (ngSubmit)="createComplaint()" class="form">
+    <div class="form-left">
+      <div class="form-group">
+        <label for="cep">CEP</label>
+        <input id="cep" class="form-control" [(ngModel)]="complaint.cep" name="cep" required />
       </div>
-      <div class="form-right">
-          <div class="form-group full-width">
-              <label for="descricao">Descrição do local do incidente</label>
-              <textarea id="descricao" class="form-control" rows="8" placeholder="Digite a descrição aqui..."></textarea>
-          </div>
-          <div class="form-group file-upload">
-              <label for="foto">Inserir foto/anexo</label>
-              <button type="button" class="add-button" onclick="document.getElementById('foto').click()">Adicionar</button>
-              <input id="foto" type="file" class="form-control" accept="image/*">
-          </div>
+      <div class="form-group">
+        <label for="street">Rua</label>
+        <input id="street" class="form-control" [(ngModel)]="complaint.street" name="street" required />
       </div>
-      <div class="form-actions">
-          <button type="button" class="btn cancel-button" routerLink="/choice">Cancelar</button>
-          <button type="submit" class="btn save-button" routerLink="/choice">Salvar</button>
+      <div class="form-group">
+        <label for="neighborhood">Bairro</label>
+        <input id="neighborhood" class="form-control" [(ngModel)]="complaint.neighborhood" name="neighborhood" required />
       </div>
+      <div class="form-group">
+        <label for="city">Cidade</label>
+        <input id="city" class="form-control" [(ngModel)]="complaint.city" name="city" required />
+      </div>
+      <div class="form-group">
+        <label for="state">Estado</label>
+        <input id="state" class="form-control" [(ngModel)]="complaint.state" name="state" required />
+      </div>
+    </div>
+    <div class="form-right">
+      <div class="form-group">
+        <label for="description">Descrição (max: 30 caracteres)</label>
+        <textarea id="description" class="form-control" [(ngModel)]="complaint.description" name="description" required></textarea>
+      </div>
+      <div class="file-upload">
+        <span class="file-upload-text">inserir imagem/anexo</span>
+        <label for="image" class="add-button" (click)="addImage()">Adicionar</label>
+        <input id="image" class="form-control" type="file" (change)="onFileChange($event)" style="display:none" />
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="button" class="btn cancel-button" routerLink="/choice">Cancelar</button>
+      <button type="submit" class="btn save-button" >Salvar</button>
+    </div>
   </form>
 </div>

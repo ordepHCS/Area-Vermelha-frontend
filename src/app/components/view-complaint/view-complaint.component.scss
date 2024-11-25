@@ -29,18 +29,18 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 800px; /* Aumenta a largura máxima do card */
+    max-width: 800px; 
 
     .info-card {
       background-color: $background-light;
-      padding: 40px; /* Aumenta o padding do card */
+      padding: 40px; 
       border-radius: 25px;
       box-shadow: $box-shadow;
       text-align: center;
-      transition: transform 0.3s; /* Adiciona transição suave */
+      transition: transform 0.3s; 
       
       &:hover {
-        transform: scale(1.05); /* Adiciona efeito de scale */
+        transform: scale(1.05);
       }
 
       h2 {
@@ -56,14 +56,14 @@
 
       .info-buttons {
         display: flex;
-        flex-direction: column; /* Coloca os botões em coluna */
+        flex-direction: column;
         gap: 20px;
 
         .info-button {
           padding: 10px 20px;
           border: 1px solid $border-color;
           border-radius: 20px;
-          background-color: $primary-color; /* Cor primária */
+          background-color: $primary-color; 
           color: $background-color1;
           font-weight: bold;
           cursor: pointer;
@@ -71,7 +71,7 @@
           transition: background-color 0.3s, transform 0.3s;
 
           &:hover {
-            background-color: $secondary-color; /* Muda para cor secundária */
+            background-color: $secondary-color;
             color: $background-color1;
             transform: scale(1.05);
           }
@@ -81,7 +81,7 @@
       .success-message {
         margin-top: 20px;
         padding: 15px 20px;
-        background-color: $success-color; /* Usando cor de sucesso */
+        background-color: $success-color;
         color: $background-color1;
         font-weight: bold;
         border-radius: 8px;

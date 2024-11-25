@@ -9,23 +9,23 @@
 
   <section class="auth-form-container">
     <div class="auth-card">
-      <h1>Crie uma conta<br>Área Vermelha</h1>
-      <form class="auth-form" (submit)="onRegister($event)">
+      <h1>Crie sua conta<br>Área Vermelha</h1>
+      <form class="auth-form" (ngSubmit)="register($event)">
         <div class="form-group">
           <label for="cpf">CPF</label>
-          <input id="cpf" type="text" placeholder="000.000.000-00">
+          <input id="cpf" type="text" placeholder="000.000.000-00" [(ngModel)]="user.cpf" name="cpf" autocomplete="username" required>
         </div>
         <div class="form-group">
-          <label for="username">Nome e sobrenome</label>
-          <input id="username" type="text" placeholder="Seu nome completo">
+          <label for="name">Nome</label>
+          <input id="name" type="text" placeholder="Seu Nome" [(ngModel)]="user.name" name="name" autocomplete="name" required>
         </div>
         <div class="form-group">
-          <label for="birthdate">Data de Nascimento</label>
-          <input id="birthdate" type="date">
+          <label for="birthDate">Data de Nascimento</label>
+          <input id="birthDate" type="date" [(ngModel)]="user.birthDate" name="birthDate" autocomplete="bday" required>
         </div>
         <div class="form-group">
           <label for="password">Senha</label>
-          <input id="password" type="password" placeholder="******">
+          <input id="password" type="password" placeholder="******" [(ngModel)]="user.password" name="password" autocomplete="new-password" required>
         </div>
         <button type="submit" class="auth-button">Registrar</button>
       </form>

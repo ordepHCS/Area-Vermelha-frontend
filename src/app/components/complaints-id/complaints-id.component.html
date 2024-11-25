@@ -13,14 +13,12 @@
       <h2>Suas Reclamações</h2>
       <ul class="areas-list" *ngIf="complaints.length > 0; else noComplaints">
         <li class="area-item" *ngFor="let complaint of complaints">
-          <span class="area-name">Código de Ocorrência: {{ complaint.occurrenceCode }}</span>
           <span class="area-incidents">CEP: {{ complaint.cep }}</span>
           <span class="area-incidents">Rua: {{ complaint.street }}</span>
           <span class="area-incidents">Bairro: {{ complaint.neighborhood }}</span>
           <span class="area-incidents">Cidade: {{ complaint.city }}</span>
           <span class="area-incidents">Estado: {{ complaint.state }}</span>
           <span class="area-incidents">Descrição: {{ complaint.description }}</span>
-          <span class="area-incidents">Usuário: {{ complaint.user.id }}</span>
           <img *ngIf="complaint.image" [src]="'data:image/jpeg;base64,' + complaint.image" alt="Imagem da Reclamação" />
         </li>
       </ul>

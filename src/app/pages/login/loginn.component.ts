@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { LoginLayoutComponent } from '../../components/login-layout/login-layout.component';
+import { LoginUserComponent } from '../../components/login-layout/login-layout.component';
 
 @Component({
   selector: 'app-loginn',
   standalone: true,
-  imports: [
-    LoginLayoutComponent
-  ],
+  imports: [LoginUserComponent],
   templateUrl: './loginn.component.html',
   styleUrl: './loginn.component.scss'
 })
